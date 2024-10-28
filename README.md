@@ -21,4 +21,4 @@ This project utilizes the following work from [Aozora Bunko](https://www.aozora.
 - **Input by**: Takashi Tsuchiya (土屋隆)
 - **Proofread by**: Noriko Takayanagi (高柳典子)
 
-All information regarding the original text, author, translator, and bibliographic details are provided by Aozora Bunko. The data is freely available for use, distribution, and adaptation under Japanese copyright law as the work is in the public domain. For further information, visit [Aozora Bunko](https://www.aozora.gr.jp/).
+This data is a public domain work under Japanese copyright law. For more information about public domain, please see [here](https://www.bunka.go.jp/seisaku/chosakuken/hokaisei/kantaiheiyo_chosakuken/1411890.html).
