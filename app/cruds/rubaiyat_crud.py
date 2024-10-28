@@ -34,9 +34,9 @@ class RubaiyatRead:
         try:
             with Session(self.engine) as session:
                 statement = select(Rubaiyat).where(Rubaiyat.is_boozeism == True).order_by(func.random()).limit(1)
-                randam_record = session.exec(statement).first()
+                results = session.exec(statement).all()
                 logger.info("Successfully read 1 records from the database.")
-                return randam_record
+                return results
         except Exception as e:
             logger.error(f"An error occurred while reading the record: {e}")
             raise
