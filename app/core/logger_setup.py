@@ -1,12 +1,17 @@
 import logging
 import logging.config
-import yaml
 from pathlib import Path
+
+import yaml
 
 
 def setup_logging(default_path="logging.conf", default_level=logging.INFO) -> None:
     """Setup logging configuration"""
     path = Path(__file__).parent.parent.parent / default_path
+    log_path = Path(__file__).parent.parent.parent / "logs/rubaiyat.log"
+
+    # Ensure the logs directory exists
+    log_path.parent.mkdir(parents=True, exist_ok=True)
 
     logger = logging.getLogger(__name__)
 
@@ -22,7 +27,6 @@ def setup_logging(default_path="logging.conf", default_level=logging.INFO) -> No
             logger.info("Default logging configuration has been applied")
     else:
         logging.basicConfig(level=default_level)
-        logger.warning(f"Logging configuration file not found at {path}. Using default logging settings.")
-
-
-setup_logging()
+        logger.warning(
+            f"Logging configuration file not found at {path}. Using default logging settings."
+        )
